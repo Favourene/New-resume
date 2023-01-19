@@ -1,0 +1,123 @@
+@import '../../resources';
+.navBar {
+  position: fixed;
+  padding: 0px 40px;
+  background: $background;
+  min-height: 9vh;
+  transition: height 1s ease-in-out;
+  overflow: hidden;
+  height: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1240px;
+
+  @include mobile-1 {
+    width: 100%;
+  }
+  @include mobile-3 {
+    padding: 0 10px;
+  }
+  @include mobile-5 {
+    min-height: 8vh;
+  }
+  & .nav-menu {
+    @include flex;
+    @include mobile-1 {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+  & .logo {
+    width: 15%;
+    padding-top: 6px;
+    @include mobile-1 {
+      & {
+        width: 200px;
+      }
+    }
+    @include mobile-3 {
+      & {
+        width: 180px;
+      }
+    }
+    & .img1 {
+      width: 100%;
+    }
+  }
+  & .toggle-icon {
+    width: 90%;
+    position: absolute;
+    top: 0%;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+    @include mobile-1 {
+      & {
+        display: initial;
+      }
+    }
+    & .menu-icon {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.5rem 0;
+      @include mobile-3 {
+        padding: 1rem 0;
+      }
+      & .drop-icon {
+        font-size: 30px;
+      }
+    }
+  }
+  & .nav-list {
+    padding: 15px 0;
+    @include mobile-1 {
+      & .nav-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    & .list {
+      padding-left: 20px;
+      font-size: 19px;
+      color: $textcolor1;
+      text-decoration: none;
+      font-weight: 400;
+      @include mobile-1 {
+        padding-bottom: 50px;
+        padding-left: 0;
+      }
+      &:hover {
+        color: $textcolor2;
+      }
+    }
+  }
+  &#light {
+    background: $backgroundl;
+    & .nav-list {
+      & .list {
+        color: $background;
+        &:hover {
+          color: $textcolor2;
+        }
+      }
+    }
+    & .toggle-icon {
+      color: $background;
+    }
+  }
+}
+.collapse {
+  height: 30rem;
+  @include mobile-1 {
+    height: 90vh;
+  }
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}

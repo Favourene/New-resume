@@ -1,0 +1,352 @@
+@import '../../resources';
+.home {
+  position: relative;
+  .darkMode {
+    position: fixed;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid $textcolor2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 5;
+    svg {
+      font-size: 30px;
+      color: $textcolor2;
+      animation: rotation 3s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+  .hero {
+    height: 100vh;
+    overflow: hidden;
+    max-height: 800px;
+    @include flex;
+    @include mobile-1 {
+      overflow: unset;
+      padding: 120px 0 0 0;
+      height: unset;
+    }
+    & .left {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      @include mobile-1 {
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      & .wrapper {
+        text-align: center;
+        color: $textcolor1;
+        @include mobile-2 {
+          padding: 0 20px;
+        }
+        & .tag {
+          font-size: 15px;
+          clip-path: polygon(
+            0% 15%,
+            0 0,
+            15% 0%,
+            85% 0%,
+            100% 0,
+            100% 15%,
+            100% 85%,
+            100% 100%,
+            85% 100%,
+            15% 100%,
+            0 100%,
+            0% 85%
+          );
+          transform: translateY(100px);
+          opacity: 0;
+          color: $textcolor2;
+          @include mobile-3 {
+            font-size: 12px;
+          }
+        }
+        & .big {
+          font-size: 80px;
+          clip-path: polygon(100% 67%, 100% 100%, 100% 100%, 100% 42%);
+          transform: translateY(100px);
+          opacity: 0;
+          @include mobile-2 {
+            font-size: 60px;
+            padding: 20px 0;
+          }
+          @include mobile-3 {
+            font-size: 45px;
+          }
+        }
+        & .resume {
+          background: $textcolor2;
+          color: $textcolor1;
+          border: none;
+          padding: 10px 25px;
+          clip-path: polygon(
+            0% 15%,
+            0 0,
+            15% 0%,
+            85% 0%,
+            100% 0,
+            100% 15%,
+            100% 85%,
+            100% 100%,
+            85% 100%,
+            15% 100%,
+            0 100%,
+            0% 85%
+          );
+          transform: translateY(100px);
+          opacity: 0;
+          &:hover {
+            cursor: pointer;
+            background: $background;
+          }
+        }
+      }
+    }
+    & .right {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      @include mobile-1 {
+        width: 100%;
+      }
+      & .sty {
+        width: 100%;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        transform: translateY(100px);
+        opacity: 0;
+      }
+    }
+  }
+  .about {
+    padding: 50px 30px 0 30px;
+    color: $textcolor1;
+    overflow-x: hidden;
+    @include mobile-1 {
+      padding: 50px 20px;
+    }
+    .about_wrapper {
+      @include flex;
+      padding-bottom: 30px;
+      flex-wrap: wrap-reverse;
+      & .right_one {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        @include mobile-1 {
+          width: 100%;
+        }
+        & img {
+          width: 100%;
+        }
+      }
+      & .top {
+        width: 55%;
+        @include mobile-1 {
+          width: 100%;
+          padding: 20px 0;
+        }
+        h1 {
+          padding-bottom: 20px;
+        }
+        & p {
+          font-size: 14px;
+          line-height: 30px;
+          letter-spacing: 1px;
+          padding-bottom: 10px;
+        }
+        & div {
+          & button {
+            background: $textcolor2;
+            color: $textcolor1;
+            border: none;
+            padding: 10px 25px;
+            &:hover {
+              cursor: pointer;
+              background: $background;
+            }
+          }
+        }
+      }
+    }
+    & .wrapper {
+      padding-top: 40px;
+      .top {
+        text-align: center;
+        padding: 50px 0 30px 0;
+        h2 {
+          font-size: 40px;
+        }
+      }
+      .right_two {
+        @include flex;
+        .card {
+          width: 47%;
+          & p {
+            font-size: 15px;
+            padding-bottom: 5px;
+          }
+          & .line {
+            height: 5px;
+            width: 100%;
+            background: $textcolor2;
+            border-radius: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .portfolio {
+    padding: 50px 30px 0 30px;
+    color: $textcolor1;
+    .top {
+      text-align: center;
+      padding: 50px 0 30px 0;
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .card {
+        width: 32%;
+        border: 1px solid gray;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile-2 {
+          width: 46%;
+        }
+        @include mobile-3 {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        .codes {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          svg {
+            margin-right: 10px;
+            font-size: 20px;
+          }
+        }
+        .name {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          h1 {
+            font-size: 22px;
+          }
+        }
+        .description {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          p {
+            font-size: 12px;
+          }
+        }
+        .live {
+          padding: 10px;
+          text-align: right;
+          border-bottom: 1px solid gray;
+          a {
+            color: #fff;
+            svg {
+              margin-left: 15px;
+              font-size: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    padding: 100px 50px;
+    @include mobile-2 {
+      padding: 100px 20px;
+    }
+    & h1 {
+      font-size: 40px;
+      color: $textcolor1;
+      font-weight: 500;
+      padding-bottom: 30px;
+      @include mobile-3 {
+        font-size: 30px;
+      }
+      & > span {
+        color: $textcolor2;
+      }
+    }
+    & .wrapper {
+      @include flex;
+      & a {
+        @include flex;
+        width: 20%;
+        border: 1px solid $textcolor2;
+        padding: 40px;
+        text-decoration: none;
+        color: $textcolor1;
+        @include mobile-1 {
+          width: 45%;
+          margin-bottom: 30px;
+        }
+        @include mobile-2 {
+          width: 100%;
+        }
+        & svg {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .hero {
+      & .big {
+        color: $background;
+      }
+    }
+    .about {
+      color: $background;
+    }
+    .portfolio {
+      color: $background;
+      .card {
+        .live {
+          a {
+            color: $background;
+          }
+        }
+      }
+    }
+    .contact {
+      & h1 {
+        color: $background;
+      }
+      & .wrapper {
+        & a {
+          color: $background;
+        }
+      }
+    }
+  }
+}
