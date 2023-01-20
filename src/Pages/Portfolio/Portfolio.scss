@@ -1,0 +1,121 @@
+@import '../../resources';
+
+.portfolio {
+  .projects {
+    padding: 100px 30px 0 30px;
+    position: relative;
+    color: #fff;
+    .darkMode {
+      position: fixed;
+      top: 50%;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 1px solid $textcolor2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 5;
+      svg {
+        font-size: 30px;
+        color: $textcolor2;
+        animation: rotation 3s infinite linear;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+    }
+    .top {
+      h1 {
+        display: flex;
+        align-items: center;
+        svg {
+          color: $textcolor2;
+          padding-right: 5px;
+        }
+      }
+      p {
+        color: #abb2bf;
+        font-weight: 400;
+        font-size: 14px;
+        padding-top: 5px;
+      }
+    }
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 30px;
+      .card {
+        width: 32%;
+        border: 1px solid gray;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile-2 {
+          width: 46%;
+        }
+        @include mobile-3 {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        .codes {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          svg {
+            margin-right: 10px;
+            font-size: 20px;
+          }
+        }
+        .name {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          h1 {
+            font-size: 22px;
+          }
+        }
+        .description {
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          p {
+            font-size: 12px;
+          }
+        }
+        .live {
+          padding: 10px;
+          text-align: right;
+          border-bottom: 1px solid gray;
+          a {
+            color: #fff;
+            svg {
+              margin-left: 15px;
+              font-size: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.light {
+    .projects {
+      color: $background;
+      .card {
+        .live {
+          a {
+            color: $background;
+          }
+        }
+      }
+    }
+  }
+}
