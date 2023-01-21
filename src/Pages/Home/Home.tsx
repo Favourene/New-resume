@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.scss'
 import NavBar from '../../Component/NavBar/NavBar'
 import { Link } from 'react-router-dom'
@@ -13,12 +13,14 @@ import 'aos/dist/aos.css'
 import { gsap } from 'gsap'
 import { SiGithub } from 'react-icons/si'
 import Projects from '../../Component/Data/ProjectList'
+import Loader from '../../Component/Loader/Loader'
 
 interface Props {
   mode: string | null
   setMode: React.Dispatch<React.SetStateAction<string | null>>
 }
 function Home({ mode, setMode }: Props) {
+  const [loader, setLoader] = useState(true)
   useEffect(() => {
     if (localStorage.getItem('mode') === null) {
       localStorage.setItem('mode', 'dark')
@@ -26,19 +28,22 @@ function Home({ mode, setMode }: Props) {
     } else {
       setMode(localStorage.getItem('mode'))
     }
-    // eslint-disable-next-line
+    setTimeout(() => {
+      setLoader(false)
+    }, 5000)
+    // eslint - disable - next - line
   }, [])
   useEffect(() => {
     AOS.init()
     AOS.refresh()
   }, [])
   useEffect(() => {
-    let tl = gsap.timeline({ default: { ease: 'power4.inOut', duration: 2 } })
+    let tl = gsap.timeline({ default: { ease: 'power4.inOut', duration: 7 } })
     tl.to('.big', {
       'clip-path': 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)',
       opacity: 1,
       y: 0,
-      duration: 2.2,
+      duration: 7.3,
     })
       .to(
         '.sty',
@@ -82,6 +87,7 @@ function Home({ mode, setMode }: Props) {
 
   return (
     <div className={mode === 'dark' ? 'home' : 'home light'}>
+      {loader && <Loader mode={mode} />}
       <NavBar mode={mode} setMode={setMode} location='home' />
       <div className='darkMode'>
         {mode === 'dark' ? (

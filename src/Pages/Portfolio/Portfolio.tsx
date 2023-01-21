@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Portfolio.scss'
 import NavBar from '../../Component/NavBar/NavBar'
 import { GiShipWheel, GiMoon } from 'react-icons/gi'
@@ -7,17 +7,25 @@ import { SiGithub } from 'react-icons/si'
 import Projects from '../../Component/Data/ProjectList'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Loader from '../../Component/Loader/Loader'
 
 interface Props {
   mode: string | null
   setMode: React.Dispatch<React.SetStateAction<string | null>>
 }
 function Portfolio({ mode, setMode }: Props) {
+  const [loader, setLoader] = useState(true)
+
   useEffect(() => {
     AOS.init()
     AOS.refresh()
+    setTimeout(() => {
+      setLoader(false)
+    }, 5000)
   }, [])
-  return (
+  return loader ? (
+    <Loader mode={mode} />
+  ) : (
     <div className={mode === 'dark' ? 'portfolio' : 'portfolio light'}>
       <NavBar mode={mode} setMode={setMode} location='portfolio' />
       <div className='projects'>

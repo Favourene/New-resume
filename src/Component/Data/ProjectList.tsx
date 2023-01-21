@@ -133,7 +133,7 @@ const Projects = [
   {
     name: 'Revent Tech',
     description:
-      'TThe website, built using React and SCSS, is a sleek and professional representation of a tech innovation company. The design is pixel perfect, ensuring that all elements are sharp and crisp on any device.The layout is clean and easy to navigate, with a focus on showcasing the companys innovative products and services.',
+      'The website, built using React and SCSS, is a sleek and professional representation of a tech innovation company. The design is pixel perfect, ensuring that all elements are sharp and crisp on any device.The layout is clean and easy to navigate, with a focus on showcasing the companys innovative products and services.',
     image: Revent,
     code: 'https://github.com/Favourene/React-Test',
     live: 'https://reventtest.netlify.app/',
