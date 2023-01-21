@@ -1,7 +1,6 @@
 @import '../../resources';
 .home {
   position: relative;
-  padding: 0 30px;
   .darkMode {
     position: fixed;
     top: 50%;
@@ -14,6 +13,7 @@
     align-items: center;
     cursor: pointer;
     z-index: 5;
+    padding: 0 30px;
     svg {
       font-size: 30px;
       color: $textcolor2;
