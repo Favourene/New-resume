@@ -43,7 +43,15 @@ function NavBar({ mode, setMode, location }: Props) {
                 Home
               </Link>
             ) : (
-              <a className='list' href='#a'>
+              <a
+                className='list'
+                href='#a'
+                onClick={() => {
+                  if (handleToggle !== 'false') {
+                    setHandleToggle(!handleToggle)
+                  }
+                }}
+              >
                 Home
               </a>
             )}
@@ -52,7 +60,15 @@ function NavBar({ mode, setMode, location }: Props) {
                 About Me
               </Link>
             ) : (
-              <a className='list' href='#b'>
+              <a
+                className='list'
+                href='#b'
+                onClick={() => {
+                  if (handleToggle !== 'false') {
+                    setHandleToggle(!handleToggle)
+                  }
+                }}
+              >
                 About Me
               </a>
             )}
@@ -61,7 +77,15 @@ function NavBar({ mode, setMode, location }: Props) {
                 Projects
               </Link>
             ) : (
-              <a className='list' href='#d'>
+              <a
+                className='list'
+                href='#d'
+                onClick={() => {
+                  if (handleToggle !== 'false') {
+                    setHandleToggle(!handleToggle)
+                  }
+                }}
+              >
                 Projects
               </a>
             )}
@@ -70,7 +94,15 @@ function NavBar({ mode, setMode, location }: Props) {
                 Contact Me
               </Link>
             ) : (
-              <a className='list' href='#e'>
+              <a
+                className='list'
+                href='#e'
+                onClick={() => {
+                  if (handleToggle !== 'false') {
+                    setHandleToggle(!handleToggle)
+                  }
+                }}
+              >
                 Contact Me
               </a>
             )}
