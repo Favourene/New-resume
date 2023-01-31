@@ -28,7 +28,7 @@ const Projects = [
       'Book Home is a modern e-commerce platform that allows customers to browse and purchase books online. Built using React as the frontend framework and Commerce.js as the e-commerce platform, the website offers a user-friendly interface and a seamless shopping experience.',
     image: BookHome,
     code: 'https://github.com/Favourene/bookhome',
-    live: 'https://ounjebazaar.netlify.app/',
+    live: 'https://bookhomes.netlify.app/',
     languages: [
       {
         name: 'React',
