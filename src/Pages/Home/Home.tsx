@@ -70,10 +70,13 @@ function Home({ mode, setMode }: Props) {
 
   const SkillList = [
     'React',
+    'Vue',
     'TypeScript',
     'Next Js',
-    'Vue',
+    'Node Js',
+    'Express JS',
     'REST API',
+    'Mongo DB',
     'Redux',
     'Context API',
     'HTML',
@@ -85,6 +88,8 @@ function Home({ mode, setMode }: Props) {
     'Bootstrap',
     'Tailwind',
     'Gsap',
+    'Ionic Framework',
+    'React Native',
   ]
 
   return (
@@ -116,7 +121,7 @@ function Home({ mode, setMode }: Props) {
             <h3 className='tag'>SENIOR FRONT-END DEVELOPER</h3>
             <h1 className='big'>I'm Igbinosa Iwinosa</h1>
             <a
-              href='https://docs.google.com/document/d/1Xhf-rEWhsHxNknBUWWzFu6KfYTB6_jfgDzQfUXOG_Tw/edit?usp=sharing'
+              href='https://docs.google.com/document/d/1bv5tqgUHtTSu_uqvjesCqiQNNEqgS0ls/edit?usp=sharing&ouid=107951640386272690957&rtpof=true&sd=true'
               target='_blank'
             >
               <button className='resume'>Resume</button>
