@@ -6,22 +6,154 @@ import Zogin from '../../Images/zogin.netlify.app_(Desktop - Large).png'
 import Vacation from '../../Images/vacationroom.netlify.app_(Desktop - Large).png'
 import Revent from '../../Images/reventtest.netlify.app_(Desktop - Large).png'
 import Salvation from '../../Images/salvationhope.netlify.app_index.html(Desktop - MDPI).png'
-import { RiCustomerService2Fill } from 'react-icons/ri'
-import {
-  SiJavascript,
-  SiReact,
-  SiHtml5,
-  SiCss3,
-  // SiTailwindcss,
-  SiSass,
-  SiGithub,
-  SiRedux,
-  SiStripe,
-  SiStyledcomponents,
-  SiMaterialui,
-} from 'react-icons/si'
+import Livoca from '../../Images/livoca.org_enroll Medium.png'
+import Spendwise from '../../Images/business.spendwise.ng_ Large.png'
+import Bubble from '../../Images/bubblecolony.com_ Medium.png'
+import Paytton from '../../Images/paytton.com_ Medium.png'
 
 const Projects = [
+  {
+    name: 'Livoca Website',
+    description:
+      'An innovative edutech website offering comprehensive user registration and management. Built with a robust full-stack architecture, it ensures a seamless and engaging learning experience. Users can easily sign up, track progress, and access a variety of educational resources. Perfect for students, educators, and lifelong learners seeking a dynamic online learning platform.',
+    image: Livoca,
+    code: null,
+    live: 'https://bookhomes.netlify.app/',
+    languages: [
+      {
+        name: 'React',
+        icon: 'uil:react',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'teenyicons:typescript-solid',
+      },
+      {
+        name: 'Scss',
+        icon: 'fa6-brands:sass',
+      },
+      {
+        name: 'Context API',
+        icon: 'simple-icons:redux',
+      },
+      {
+        name: 'Node JS',
+        icon: 'la:node',
+      },
+      {
+        name: 'Express JS',
+        icon: 'skill-icons:expressjs-light',
+      },
+      {
+        name: 'MongoDB',
+        icon: 'simple-icons:mongodb',
+      },
+    ],
+    stack: 'Full-stack',
+  },
+  {
+    name: 'Spendwise.ng',
+    description:
+      'A financial service that gives users the power to effortlessly manage their expenses, hold and make payments in various currencies, generate virtual and physical cards, and pay bills with ease. This service has the ability to streamline financial management and make it more convenient for users to handle their money. ',
+    image: Spendwise,
+    code: null,
+    live: 'https://business.spendwise.ng/',
+    languages: [
+      {
+        name: 'React',
+        icon: 'uil:react',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'teenyicons:typescript-solid',
+      },
+      {
+        name: 'Scss',
+        icon: 'fa6-brands:sass',
+      },
+      {
+        name: 'Context API',
+        icon: 'simple-icons:redux',
+      },
+      {
+        name: 'Node JS',
+        icon: 'la:node',
+      },
+      {
+        name: 'AWS Lambda',
+        icon: 'simple-icons:awslambda',
+      },
+      {
+        name: 'AWS S3',
+        icon: 'simple-icons:amazons3',
+      },
+    ],
+    stack: 'Front-end',
+  },
+  {
+    name: 'Bubble Colony',
+    description: `A vibrant e-commerce store for kids, featuring an engaging front-end design. This platform allows users to purchase tickets for popular children's events in their area. Built with a user-friendly interface, it ensures a seamless and enjoyable shopping experience for parents and kids alike. The store integrates event search, ticket buying, and secure checkout functionalities to meet all user needs. `,
+    image: Bubble,
+    code: null,
+    live: 'https://bubblecolony.com/',
+    languages: [
+      {
+        name: 'React',
+        icon: 'uil:react',
+      },
+      {
+        name: 'Scss',
+        icon: 'fa6-brands:sass',
+      },
+      {
+        name: 'Context API',
+        icon: 'simple-icons:redux',
+      },
+      {
+        name: 'Git lab',
+        icon: 'mdi:gitlab',
+      },
+    ],
+    stack: 'Front-end',
+  },
+  {
+    name: 'Paytton',
+    description: `Paytton enhances collaboration and work efficiency for procurement and finance professionals. Streamline your source-to-pay process and revolutionize the way your teams work together`,
+    image: Paytton,
+    code: null,
+    live: 'https://paytton.com/',
+    languages: [
+      {
+        name: 'React',
+        icon: 'uil:react',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'teenyicons:typescript-solid',
+      },
+      {
+        name: 'Scss',
+        icon: 'fa6-brands:sass',
+      },
+      {
+        name: 'Context API',
+        icon: 'simple-icons:redux',
+      },
+      {
+        name: 'Node JS',
+        icon: 'la:node',
+      },
+      {
+        name: 'Express JS',
+        icon: 'skill-icons:expressjs-light',
+      },
+      {
+        name: 'MongoDB',
+        icon: 'simple-icons:mongodb',
+      },
+    ],
+    stack: 'Full-stack',
+  },
   {
     name: 'Book Home',
     description:
@@ -32,21 +164,22 @@ const Projects = [
     languages: [
       {
         name: 'React',
-        icon: SiReact,
+        icon: 'uil:react',
       },
       {
         name: 'Scss',
-        icon: SiSass,
+        icon: 'fa6-brands:sass',
       },
       {
         name: 'Context API',
-        icon: SiRedux,
+        icon: 'simple-icons:redux',
       },
       {
         name: 'Stripe API',
-        icon: SiStripe,
+        icon: 'mage:stripe',
       },
     ],
+    stack: 'Full-stack',
   },
   {
     name: 'Ounje Bazaar',
@@ -58,29 +191,30 @@ const Projects = [
     languages: [
       {
         name: 'React',
-        icon: SiReact,
+        icon: 'uil:react',
       },
       {
         name: 'SCSS',
-        icon: SiSass,
+        icon: 'fa6-brands:sass',
       },
       {
         name: 'Styled components',
-        icon: SiStyledcomponents,
+        icon: 'simple-icons:styledcomponents',
       },
       {
         name: 'Material Ui',
-        icon: SiMaterialui,
+        icon: 'mdi:material-ui',
       },
       {
         name: 'Context API',
-        icon: SiRedux,
+        icon: 'simple-icons:redux',
       },
       {
         name: 'Stripe API',
-        icon: SiStripe,
+        icon: 'mage:stripe',
       },
     ],
+    stack: 'Full-stack',
   },
   {
     name: 'The Venue',
@@ -92,21 +226,22 @@ const Projects = [
     languages: [
       {
         name: 'HTML',
-        icon: SiHtml5,
+        icon: 'akar-icons:html-fill',
       },
       {
         name: 'CSS',
-        icon: SiCss3,
+        icon: 'akar-icons:css-fill',
       },
       {
         name: 'Javascript',
-        icon: SiJavascript,
+        icon: 'devicon-plain:javascript',
       },
       {
         name: 'Twak.io',
-        icon: RiCustomerService2Fill,
+        icon: 'ri:customer-service-2-line',
       },
     ],
+    stack: 'Front-end',
   },
   {
     name: 'Zogin',
@@ -118,17 +253,18 @@ const Projects = [
     languages: [
       {
         name: 'HTML',
-        icon: SiHtml5,
+        icon: 'akar-icons:html-fill',
       },
       {
         name: 'CSS',
-        icon: SiCss3,
+        icon: 'akar-icons:css-fill',
       },
       {
         name: 'Javascript',
-        icon: SiJavascript,
+        icon: 'devicon-plain:javascript',
       },
     ],
+    stack: 'Front-end',
   },
   {
     name: 'Revent Tech',
@@ -140,17 +276,18 @@ const Projects = [
     languages: [
       {
         name: 'React',
-        icon: SiReact,
+        icon: 'uil:react',
       },
       {
         name: 'Scss',
-        icon: SiSass,
+        icon: 'fa6-brands:sass',
       },
       {
         name: 'Context API',
-        icon: SiRedux,
+        icon: 'simple-icons:redux',
       },
     ],
+    stack: 'Front-end',
   },
   {
     name: 'Vacation Room',
@@ -162,17 +299,18 @@ const Projects = [
     languages: [
       {
         name: 'HTML',
-        icon: SiHtml5,
+        icon: 'akar-icons:html-fill',
       },
       {
         name: 'CSS',
-        icon: SiCss3,
+        icon: 'akar-icons:css-fill',
       },
       {
         name: 'Javascript',
-        icon: SiJavascript,
+        icon: 'devicon-plain:javascript',
       },
     ],
+    stack: 'Front-end',
   },
   {
     name: 'University Website',
@@ -184,17 +322,18 @@ const Projects = [
     languages: [
       {
         name: 'React',
-        icon: SiReact,
+        icon: 'uil:react',
       },
       {
         name: 'Scss',
-        icon: SiSass,
+        icon: 'fa6-brands:sass',
       },
       {
         name: 'Context API',
-        icon: SiRedux,
+        icon: 'simple-icons:redux',
       },
     ],
+    stack: 'Front-end',
   },
   {
     name: 'Salvation Hope',
@@ -206,17 +345,18 @@ const Projects = [
     languages: [
       {
         name: 'HTML',
-        icon: SiHtml5,
+        icon: 'akar-icons:html-fill',
       },
       {
         name: 'CSS',
-        icon: SiCss3,
+        icon: 'akar-icons:css-fill',
       },
       {
         name: 'Javascript',
-        icon: SiJavascript,
+        icon: 'devicon-plain:javascript',
       },
     ],
+    stack: 'Front-end',
   },
 ]
 

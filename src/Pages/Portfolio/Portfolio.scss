@@ -71,7 +71,7 @@
         .codes {
           padding: 10px;
           border-bottom: 1px solid gray;
-          svg {
+          iconify-icon {
             margin-right: 10px;
             font-size: 20px;
           }
@@ -81,6 +81,9 @@
           border-bottom: 1px solid gray;
           h1 {
             font-size: 22px;
+          }
+          h6 {
+            padding-top: 5px;
           }
         }
         .description {

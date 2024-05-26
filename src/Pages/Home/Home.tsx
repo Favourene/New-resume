@@ -14,6 +14,7 @@ import { gsap } from 'gsap'
 import { SiGithub } from 'react-icons/si'
 import Projects from '../../Component/Data/ProjectList'
 import Loader from '../../Component/Loader/Loader'
+import { Icon } from '@iconify-icon/react'
 
 interface Props {
   mode: string | null
@@ -121,7 +122,7 @@ function Home({ mode, setMode }: Props) {
             <h3 className='tag'>SENIOR FRONT-END DEVELOPER</h3>
             <h1 className='big'>I'm Igbinosa Iwinosa</h1>
             <a
-              href='https://docs.google.com/document/d/1bv5tqgUHtTSu_uqvjesCqiQNNEqgS0ls/edit?usp=sharing&ouid=107951640386272690957&rtpof=true&sd=true'
+              href='https://docs.google.com/document/d/1qnU0tIhBJLZW4Lnpf6h8HFOaIhPeqYoaMLDXIzE9EAk/edit?usp=sharing'
               target='_blank'
             >
               <button className='resume'>Resume</button>
@@ -153,16 +154,15 @@ function Home({ mode, setMode }: Props) {
               data-aos-easing='ease-in-sine'
             >
               <p>
-                As a highly skilled Front-End Developer with a strong focus on
-                process and performance, I have a track record of delivering
-                state-of-the-art, user-friendly websites and applications. I
-                take great pride in my work and strive to ensure that the
-                projects I deliver are easy to use and contribute to the overall
-                success of the organizations I work for. With experience in
-                various tech industries, including Fintech, EduTech, and
-                E-commerce, I am well-equipped to help scale up any organization
-                through the development of high-quality websites and
-                applications.
+                As a seasoned Front-End Engineer driven by action and results, I
+                bring over 6 years of expertise in crafting sleek, user-friendly
+                websites. Proficient in React, Vue, and TypeScript, I'm equipped
+                to deliver top-notch digital solutions. With experience in
+                Fintech, EduTech, and E-commerce, I'm primed to supercharge your
+                organization's growth. Additionally, I am skilled in backend
+                technology, with extensive knowledge and practical experience in
+                Node.js, Express, and MongoDB, enabling me to build robust and
+                scalable full-stack applications.
               </p>
               <div></div>
             </div>
@@ -206,11 +206,12 @@ function Home({ mode, setMode }: Props) {
               </div>
               <div className='codes'>
                 {item.languages.map((item) => (
-                  <item.icon title={item.name} key={item.name} />
+                  <Icon icon={item.icon} title={item.name} />
                 ))}
               </div>
               <div className='name'>
                 <h1>{item.name}</h1>
+                <h6>Role : {item.stack}</h6>
               </div>
               <div className='description'>
                 <p>
@@ -220,9 +221,11 @@ function Home({ mode, setMode }: Props) {
                 </p>
               </div>
               <div className='live'>
-                <a href={item.code}>
-                  <SiGithub title='Code' />
-                </a>
+                {item.code && (
+                  <a href={item.code}>
+                    <SiGithub title='Code' />
+                  </a>
+                )}
                 <a href={item.live}>
                   <FaEye title='Live' />
                 </a>

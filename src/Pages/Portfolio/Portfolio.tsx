@@ -8,6 +8,7 @@ import Projects from '../../Component/Data/ProjectList'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Loader from '../../Component/Loader/Loader'
+import { Icon } from '@iconify-icon/react'
 
 interface Props {
   mode: string | null
@@ -67,19 +68,22 @@ function Portfolio({ mode, setMode }: Props) {
               </div>
               <div className='codes'>
                 {item.languages.map((item) => (
-                  <item.icon title={item.name} key={item.name} />
+                  <Icon icon={item.icon} title={item.name} />
                 ))}
               </div>
               <div className='name'>
                 <h1>{item.name}</h1>
+                <h6>Role : {item.stack}</h6>
               </div>
               <div className='description'>
                 <p>{item.description}</p>
               </div>
               <div className='live'>
-                <a href={item.code}>
-                  <SiGithub title='Code' />
-                </a>
+                {item.code && (
+                  <a href={item.code}>
+                    <SiGithub title='Code' />
+                  </a>
+                )}
                 <a href={item.live}>
                   <FaEye title='Live' />
                 </a>
