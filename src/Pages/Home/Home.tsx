@@ -119,7 +119,7 @@ function Home({ mode, setMode }: Props) {
       <section id='a' className='hero'>
         <div className='left'>
           <div className='wrapper'>
-            <h3 className='tag'>SENIOR FRONT-END DEVELOPER</h3>
+            <h3 className='tag'>SENIOR FULLSTACK ENGINEER</h3>
             <h1 className='big'>I'm Igbinosa Iwinosa</h1>
             <a
               href='https://docs.google.com/document/d/1qnU0tIhBJLZW4Lnpf6h8HFOaIhPeqYoaMLDXIzE9EAk/edit?usp=sharing'
@@ -154,15 +154,17 @@ function Home({ mode, setMode }: Props) {
               data-aos-easing='ease-in-sine'
             >
               <p>
-                As a seasoned Front-End Engineer driven by action and results, I
-                bring over 6 years of expertise in crafting sleek, user-friendly
-                websites. Proficient in React, Vue, and TypeScript, I'm equipped
-                to deliver top-notch digital solutions. With experience in
-                Fintech, EduTech, and E-commerce, I'm primed to supercharge your
-                organization's growth. Additionally, I am skilled in backend
-                technology, with extensive knowledge and practical experience in
-                Node.js, Express, and MongoDB, enabling me to build robust and
-                scalable full-stack applications.
+                Senior Full-Stack Engineer with 7+ years of experience
+                architecting and delivering scalable, high-performance platforms
+                across FinTech, Logistics, EduTech, and E-commerce. Recognized
+                for expertise in React, Vue.js, TypeScript, Node.js, and
+                MongoDB, with a proven ability to lead end-to-end product
+                development from architecture to deployment. Skilled in
+                integrating AI/ML models for automation, predictive forecasting,
+                and intelligent insights. Adept at collaborating in
+                cross-functional, remote-first environments and scaling
+                platforms that process ₦3B+ transactions and serve thousands of
+                active users.
               </p>
               <div></div>
             </div>
